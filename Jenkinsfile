@@ -18,7 +18,7 @@ pipeline {
                 }
             }
 
-            stage{
+            stage ('Deploy Staging Area Pipeline'){
                 steps{
 
                     build job : 'Deploy-StagingArea-Pipeline'
