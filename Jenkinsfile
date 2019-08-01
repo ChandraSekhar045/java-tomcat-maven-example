@@ -17,6 +17,13 @@ pipeline {
                     archiveArtifacts artifacts : '**/*.war'
                 }
             }
+
+            stage{
+                steps{
+
+                    build job : 'Deploy-StagingArea-Pipeline'
+                }
+            }
         }
     }
 }
